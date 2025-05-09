@@ -37,11 +37,6 @@ namespace Plugin.InAppBilling
         public string TransactionIdentifier { get; set; }
 
         /// <summary>
-        /// OriginalTransactionIdentifier - This is the Id/Token of restored transaction from the AppStore
-        /// </summary>
-        public string OriginalTransactionIdentifier { get; set; }        
-
-        /// <summary>
         /// Transaction date in UTC
         /// </summary>
         public DateTime TransactionDateUtc { get; set; }
@@ -99,6 +94,10 @@ namespace Plugin.InAppBilling
 
         public string OriginalJson { get; set; }
         public string Signature { get; set; }
+
+        public DateTimeOffset ExpirationDate { get; set; }
+
+        public string InAppOfferToken { get; set; }
 
         public static bool operator ==(InAppBillingPurchase left, InAppBillingPurchase right) =>
 			Equals(left, right);
