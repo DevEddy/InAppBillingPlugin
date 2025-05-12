@@ -45,9 +45,12 @@
 
   <!-- platform version number information -->
   <PropertyGroup>
-    <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('ios'))">14.2</SupportedOSPlatformVersion>
-    <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('maccatalyst'))">14.0</SupportedOSPlatformVersion>
-    <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('macos'))">13.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('ios'))">15.0</SupportedOSPlatformVersion>
+    <TargetPlatformMinVersion Condition="$(TargetFramework.Contains('ios'))">15.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('maccatalyst'))">15.0</SupportedOSPlatformVersion>
+    <TargetPlatformMinVersion Condition="$(TargetFramework.Contains('maccatalyst'))">15.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('macos'))">15.0</SupportedOSPlatformVersion>
+    <TargetPlatformMinVersion Condition="$(TargetFramework.Contains('macos'))">15.0</TargetPlatformMinVersion>
     <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('android'))">21.0</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('windows'))">10.0.17763.0</SupportedOSPlatformVersion>
     <TargetPlatformMinVersion Condition="$(TargetFramework.Contains('windows'))">10.0.17763.0</TargetPlatformMinVersion>
